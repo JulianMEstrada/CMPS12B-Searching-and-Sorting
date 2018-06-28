@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+char* make_string_from(char* from, int count) {
+	/* TODO 2 */
+	char* string = calloc(count+1,sizeof(char)); 
+	for (int c = 0; c<count; c++) 
+		string[c]=from[c]; 
+	return string;
+	/* TODO 2 */
+}
+int main(int argc, char** argv) {
+	/* TODO 1 */
+	for (int c = 0; c<argc; c++) 
+		printf("%s\n", argv[c]);
+ /* TODO 1 */
+
+/*
+	color: red, blue, green
+	rule = color
+	expansions = red, blue, green
+	A possible expansion of color is red
+	free(expansion)
+	expansion = null
+	
+	if(c = '\n')
+		free(rule)
+		rule = null	
+
+*/
+/* TODO 3 */
+	char char_buffer[1000];
+	char* rule=NULL;  
+	char* expansion=NULL;
+	int buffer_index= 0; 
+	char c;  
+	while(((c = getchar())!= EOF)){
+			char_buffer[buffer_index] = c; 
+		if(c==':'){
+			rule =make_string_from(char_buffer,buffer_index);
+			buffer_index=0; 
+		}
+
+		else if(c==','|| c=='\n'){
+			expansion= make_string_from(char_buffer,buffer_index);
+			buffer_index= 0; 
+			printf("A possible expansion of %s is %s \n", rule, expansion);
+
+		    free(expansion);
+	        expansion = NULL;
+	        if( c=='\n')
+		    free(rule);
+		    //rule == NULL;
+		}
+		else {
+			buffer_index++; 
+		}
+	}
+ 	/* TODO 3 */
+}

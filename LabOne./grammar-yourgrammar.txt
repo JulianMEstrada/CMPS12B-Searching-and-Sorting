@@ -1,0 +1,8 @@
+potname:Blue Dream,GSC(f.k.a Girl Scout Cookies),Sour Diesel
+straintype:Hybrid,Sativa,Indica
+color:green,gold,purple
+texture:fur,hairs,stems
+toke:#potname# 
+description:#straintype# with #color# #texture#
+place:Dell Taco,the beach,the movies,Burning Man,Six Flags
+origin:once I smoked #toke# and I think it was a #description# after smoking I surfed to #place#

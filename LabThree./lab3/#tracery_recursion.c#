@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+char* make_string_from(char* from, int count) {
+	/* TODO 2 */
+	return NULL;
+	/* TODO 2 */
+}
+	//char* string = calloc(count+1,sizeof(int)); 
+	//for (int c = 0; c<count; c++) 
+   // string[c]=from[c];
+ //return string; 
+ //char* char_bufferœôòë;
+ // char* bufferœôòë_index; 
+//char_bufferœôòë will be a statically allocated array of characters, 
+ //that we will fill up with the characters that we read in one at a time, using œôòëgetchar()
+
+
+int main(int argc, char** argv) {
+	/* TODO 1 */
+for (int c = 0; c<argc; c++) 
+   printf("%s\n", argv[c]);
+ 	/* TODO 1 */
+}
+
+//char* string = make_string_from(*argv,argc);
+//for (int c = 0; c<argc; c++) 
+//printf("%s\n",string);
+//free(string);
+
+
+ 	/* TODO 3 */
+ 	/* TODO 3 */
+
+
